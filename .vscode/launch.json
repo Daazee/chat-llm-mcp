@@ -1,0 +1,70 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "MCP Server (port 5100)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build-mcpserver",
+      "program": "${workspaceFolder}/src/MsDynamics365MCP.MCPServer/bin/Debug/net8.0/MsDynamics365MCP.MCPServer.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/src/MsDynamics365MCP.MCPServer",
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_URLS": "http://localhost:5100"
+      },
+      "serverReadyAction": {
+        "action": "openExternally",
+        "pattern": "\\bNow listening on:\\s+(https?://\\S+)",
+        "uriFormat": "%s/mcp"
+      }
+    },
+    {
+      "name": "Dynamics CRM AI API (port 5200)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build-crmapi",
+      "program": "${workspaceFolder}/src/MSDynamicsCRM.API/bin/Debug/net8.0/MSDynamicsCRM.API.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/src/MSDynamicsCRM.API",
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_URLS": "http://localhost:5200"
+      },
+      "serverReadyAction": {
+        "action": "openExternally",
+        "pattern": "\\bNow listening on:\\s+(https?://\\S+)",
+        "uriFormat": "%s/swagger"
+      }
+    },
+    {
+      "name": "MCP Chat Client (port 5000)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build-mcpclient",
+      "program": "${workspaceFolder}/src/MsDynamics365MCP.MCPClient/bin/Debug/net8.0/MsDynamics365MCP.MCPClient.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/src/MsDynamics365MCP.MCPClient",
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_URLS": "http://localhost:5000"
+      },
+      "serverReadyAction": {
+        "action": "openExternally",
+        "pattern": "\\bNow listening on:\\s+(https?://\\S+)",
+        "uriFormat": "%s"
+      }
+    }
+  ],
+  "compounds": [
+    {
+      "name": "▶ Launch All (MCP + AI API + Chat UI)",
+      "configurations": [
+        "MCP Server (port 5100)",
+        "Dynamics CRM AI API (port 5200)",
+        "MCP Chat Client (port 5000)"
+      ],
+      "stopAll": true
+    }
+  ]
+}

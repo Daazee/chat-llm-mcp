@@ -1,0 +1,8 @@
+{
+  "servers": {
+    "MsDynamics365MCP": {
+      "type": "http",
+      "url": "http://localhost:5100/mcp"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+[
+  {
+    "Name": "▶ Launch All (MCP Server + AI API + Chat UI)",
+    "Projects": [
+      {
+        "Path": "src\\MsDynamics365MCP.MCPServer\\MsDynamics365MCP.MCPServer.csproj",
+        "Action": "StartWithoutDebugging"
+      },
+      {
+        "Path": "src\\MSDynamicsCRM.API\\MSDynamicsCRM.API.csproj",
+        "Action": "StartWithoutDebugging"
+      },
+      {
+        "Path": "src\\MsDynamics365MCP.MCPClient\\MsDynamics365MCP.MCPClient.csproj",
+        "Action": "Start"
+      }
+    ]
+  },
+  {
+    "Name": "MCP Server only",
+    "Projects": [
+      {
+        "Path": "src\\MsDynamics365MCP.MCPServer\\MsDynamics365MCP.MCPServer.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

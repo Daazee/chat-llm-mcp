@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MsDynamics365 AI Assistant</title>
+  <link rel="stylesheet" href="/css/chat.css" />
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- ═══════════════════════════════════════════════
+       LEFT: Main content / CRM dashboard overview
+  ════════════════════════════════════════════════ -->
+  <main class="main-content panel-open" id="main-content">
+    <div class="brand">
+      <div class="brand-logo">⚡</div>
+      <h1>Dynamics 365 AI Assistant</h1>
+      <p>Powered by Llama · MCP Tools · .NET 8</p>
+    </div>
+
+    <div class="status-grid">
+      <div class="status-card">
+        <div class="icon">🤖</div>
+        <div class="label">AI Model</div>
+        <div class="value"><span class="dot blue"></span>llama3.2</div>
+      </div>
+      <div class="status-card">
+        <div class="icon">🔌</div>
+        <div class="label">MCP Server</div>
+        <div class="value"><span class="dot green"></span>:5100</div>
+      </div>
+      <div class="status-card">
+        <div class="icon">🧠</div>
+        <div class="label">Ollama</div>
+        <div class="value"><span class="dot orange"></span>:11434</div>
+      </div>
+      <div class="status-card">
+        <div class="icon">👥</div>
+        <div class="label">Contacts</div>
+        <div class="value">5 records</div>
+      </div>
+      <div class="status-card">
+        <div class="icon">🏢</div>
+        <div class="label">Accounts</div>
+        <div class="value">5 records</div>
+      </div>
+      <div class="status-card">
+        <div class="icon">📈</div>
+        <div class="label">Pipeline</div>
+        <div class="value">$1.2M</div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ═══════════════════════════════════════════════
+       RIGHT: GitHub Copilot-style Chat Panel
+  ════════════════════════════════════════════════ -->
+  <aside class="chat-panel" id="chat-panel">
+
+    <!-- Header -->
+    <div class="chat-header">
+      <div class="chat-header-icon">🤖</div>
+      <div class="chat-header-info">
+        <h2>CRM AI Assistant</h2>
+        <span>● Dynamics 365 · Llama · MCP</span>
+      </div>
+      <div class="chat-header-actions">
+        <button class="icon-btn" id="clear-btn" title="Clear conversation">🗑</button>
+        <button class="icon-btn" id="close-btn" title="Close panel">✕</button>
+      </div>
+    </div>
+
+    <!-- Message area -->
+    <div class="chat-messages" id="chat-messages">
+      <div class="msg-system">
+        💡 Ask about contacts, accounts, opportunities, cases or the pipeline.
+      </div>
+
+      <!-- Welcome message from AI -->
+      <div class="message ai">
+        <div class="msg-avatar">🤖</div>
+        <div class="msg-bubble">Hello! I'm your Dynamics 365 AI Assistant powered by Llama.
+
+I can help you with:
+• 👥 Contacts – search and view CRM contacts
+• 🏢 Accounts – company information and details
+• 📊 Opportunities – pipeline stages and values
+• 🎫 Cases – customer support tickets
+• 📈 Pipeline – revenue summary and forecasts
+
+What would you like to know?</div>
+        <div class="msg-meta">Just now</div>
+      </div>
+    </div>
+
+    <!-- Suggested prompts -->
+    <div class="suggestions">
+      <button class="suggestion-chip">Show all contacts</button>
+      <button class="suggestion-chip">Get open opportunities</button>
+      <button class="suggestion-chip">High priority cases</button>
+      <button class="suggestion-chip">Pipeline summary</button>
+    </div>
+
+    <!-- Input area -->
+    <div class="chat-input-area">
+      <div class="input-row">
+        <textarea
+          id="chat-input"
+          placeholder="Ask about your CRM data…"
+          rows="1"
+          aria-label="Chat message"></textarea>
+        <button class="send-btn" id="send-btn" title="Send (Enter)">
+          ➤
+        </button>
+      </div>
+      <p class="input-hint">Press <strong>Enter</strong> to send · <strong>Shift+Enter</strong> for new line</p>
+    </div>
+
+  </aside>
+</div>
+
+<!-- Floating button to re-open chat panel when closed -->
+<button class="chat-toggle hidden" id="chat-toggle" title="Open AI Assistant">
+  💬
+</button>
+
+<script src="/js/chat.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+@MsDynamics365MCP.MCPServer_HostAddress = http://localhost:5295
+
+GET {{MsDynamics365MCP.MCPServer_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
