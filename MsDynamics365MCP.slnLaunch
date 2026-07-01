@@ -4,11 +4,11 @@
     "Projects": [
       {
         "Path": "src\\MsDynamics365MCP.MCPServer\\MsDynamics365MCP.MCPServer.csproj",
-        "Action": "StartWithoutDebugging"
+        "Action": "Start"
       },
       {
         "Path": "src\\MSDynamicsCRM.API\\MSDynamicsCRM.API.csproj",
-        "Action": "StartWithoutDebugging"
+        "Action": "Start"
       },
       {
         "Path": "src\\MsDynamics365MCP.MCPClient\\MsDynamics365MCP.MCPClient.csproj",
