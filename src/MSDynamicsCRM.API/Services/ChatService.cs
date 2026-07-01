@@ -70,12 +70,12 @@ public class ChatService : IChatService
              //McpClientTool extends AIFunction (which extends AITool) — direct assignment works
             var chatOptions = new ChatOptions
             {
-                //Tools    = [.. mcpTools],
-                //ToolMode = ChatToolMode.Auto
+                Tools = [.. mcpTools],
+                ToolMode = ChatToolMode.Auto
             };
 
             AiChatResponse aiResponse = await agentClient.GetResponseAsync(
-                messages, chatOptions, cancellationToken); //set tools to null as llama:latest does not support tools directly
+                messages, chatOptions, cancellationToken);
 
             var responseText = aiResponse.Messages.LastOrDefault()?.Text
                 ?? "(No response generated)";
