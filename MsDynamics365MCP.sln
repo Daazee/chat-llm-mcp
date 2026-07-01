@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.14.37411.7
+# Visual Studio Version 18
+VisualStudioVersion = 18.7.11919.86 stable
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MsDynamics365MCP.MCPClient", "src\MsDynamics365MCP.MCPClient\MsDynamics365MCP.MCPClient.csproj", "{D9579C5A-667F-4183-9EFB-EE4E5EB396AF}"
 EndProject
@@ -67,6 +67,8 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{D9579C5A-667F-4183-9EFB-EE4E5EB396AF} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
+		{9F3AD60D-30E3-49A1-8FE5-852B3929C60C} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{68A513F7-8DEA-47D8-BF71-0AD6A92E8AF8} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
